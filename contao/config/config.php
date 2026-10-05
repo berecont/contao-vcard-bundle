@@ -1,6 +1,6 @@
 <?php
 
-use Lukasbableck\ContaoVcardBundle\Model\VcardModel;
+use Berecont\ContaoVcardBundle\Model\VcardModel;
 
 $GLOBALS['BE_MOD']['content']['vcard'] = [
     'tables' => ['tl_vcard'],

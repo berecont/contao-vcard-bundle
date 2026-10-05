@@ -1,5 +1,5 @@
 {
-    "name": "lukasbableck/contao-vcard-bundle",
+    "name": "berecont/contao-vcard-bundle",
     "type": "contao-bundle",
 	"description": "This bundle allows you to create vCards in Contao.",
 	"keywords": [
@@ -15,6 +15,11 @@
 			"name": "Lukas Bableck",
 			"email": "lukas@bableck.dev",
 			"homepage": "https://bableck.dev"
+		},
+		{
+			"name": "Bernhard Renner",
+			"homepage": "https://berecont.at",
+			"role": "Maintainer"
 		}
 	],
     "require": {
@@ -38,10 +43,10 @@
 	},
     "autoload": {
         "psr-4": {
-            "Lukasbableck\\ContaoVcardBundle\\": "src/"
+            "Berecont\\ContaoVcardBundle\\": "src/"
         }
     },
 	"extra": {
-		"contao-manager-plugin": "Lukasbableck\\ContaoVcardBundle\\ContaoManager\\Plugin"
+		"contao-manager-plugin": "Berecont\\ContaoVcardBundle\\ContaoManager\\Plugin"
 	}
 }

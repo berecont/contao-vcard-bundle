@@ -1,5 +1,5 @@
 <?php
-namespace Lukasbableck\ContaoVcardBundle\Model;
+namespace Berecont\ContaoVcardBundle\Model;
 
 use Contao\Model;
 

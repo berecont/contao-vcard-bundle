@@ -1,10 +1,10 @@
 <?php
-namespace Lukasbableck\ContaoVcardBundle\Controller;
+namespace Berecont\ContaoVcardBundle\Controller;
 
 use Contao\CoreBundle\Exception\PageNotFoundException;
 use Contao\CoreBundle\Framework\ContaoFramework;
-use Lukasbableck\ContaoVcardBundle\Helper\VcardHelper;
-use Lukasbableck\ContaoVcardBundle\Model\VcardModel;
+use Berecont\ContaoVcardBundle\Helper\VcardHelper;
+use Berecont\ContaoVcardBundle\Model\VcardModel;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;

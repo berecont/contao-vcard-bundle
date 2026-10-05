@@ -1,15 +1,15 @@
 <?php
-namespace Lukasbableck\ContaoVcardBundle\Helper;
+namespace Berecont\ContaoVcardBundle\Helper;
 
 use Contao\FilesModel;
 use Contao\StringUtil;
-use Lukasbableck\ContaoVcardBundle\Model\VcardModel;
+use Berecont\ContaoVcardBundle\Model\VcardModel;
 
 class VcardHelper {
     public static function generateVcard(VcardModel $vcard, string $sourceURL): string {
         $data = "BEGIN:VCARD\r\n";
         $data .= "VERSION:4.0\r\n";
-        $data .= "PRODID:-//Contao//lukasbableck/contao-vcard-bundle//EN\r\n";
+        $data .= "PRODID:-//Contao//berecont/contao-vcard-bundle//EN\r\n";
         $data .= 'REV:'.date('Ymd\This\Z', $vcard->tstamp)."\r\n";
         $data .= 'SOURCE:'.$sourceURL."\r\n";
         $data .= 'KIND:'.$vcard->kind."\r\n";

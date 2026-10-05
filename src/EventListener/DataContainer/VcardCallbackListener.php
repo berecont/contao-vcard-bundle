@@ -1,11 +1,11 @@
 <?php
-namespace Lukasbableck\ContaoVcardBundle\EventListener\DataContainer;
+namespace Berecont\ContaoVcardBundle\EventListener\DataContainer;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 use Contao\DataContainer;
 use Contao\Input;
 use Contao\Message;
-use Lukasbableck\ContaoVcardBundle\Model\VcardModel;
+use Berecont\ContaoVcardBundle\Model\VcardModel;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\Translation\TranslatorInterface;
 

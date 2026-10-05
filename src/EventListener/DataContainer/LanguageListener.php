@@ -1,5 +1,5 @@
 <?php
-namespace Lukasbableck\ContaoVcardBundle\EventListener\DataContainer;
+namespace Berecont\ContaoVcardBundle\EventListener\DataContainer;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 use Contao\CoreBundle\Intl\Locales;
