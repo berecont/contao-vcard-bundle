@@ -1,0 +1,36 @@
+{% extends '@Contao/content_element/_base.html.twig' %}
+
+{% block content %}
+
+    <div class="vcard">
+
+        <div class="vcard__content">
+
+            <h2 class="vcard__name">
+                {{ formattedName }}
+            </h2>
+
+            {% if vcard.jobtitle %}
+                <div class="vcard__jobtitle">
+                    {{ vcard.jobtitle }}
+                </div>
+            {% endif %}
+
+            {% if vcard.role %}
+                <div class="vcard__role">
+                    {{ vcard.role }}
+                </div>
+            {% endif %}
+
+            <a
+                class="vcard__download"
+                href="{{ downloadUrl }}"
+            >
+                vCard herunterladen
+            </a>
+
+        </div>
+
+    </div>
+
+{% endblock %}
