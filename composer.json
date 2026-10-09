@@ -32,7 +32,8 @@
         "symfony/framework-bundle": "^6.4 || ^7.3",
         "symfony/http-foundation": "^6.4 || ^7.3",
         "symfony/http-kernel": "^6.4 || ^7.3",
-        "symfony/routing": "^6.4 || ^7.3"
+        "symfony/routing": "^6.4 || ^7.3",
+		"endroid/qr-code": "^6.0 <6.1"
     },
 	"conflict": {
 		"contao/manager-plugin": "<2.0 || >=3.0"

@@ -4,32 +4,72 @@
 
     <div class="vcard">
 
+        {% if showImage and photo %}
+            <div class="vcard__image">
+                {% set figure = contao_figure(photo, size) %}
+                {{ figure|raw }}
+            </div>
+        {% endif %}
+
         <div class="vcard__content">
 
-            <h2 class="vcard__name">
-                {{ formattedName }}
-            </h2>
-
-            {% if vcard.jobtitle %}
-                <div class="vcard__jobtitle">
-                    {{ vcard.jobtitle }}
-                </div>
+            {% if showName %}
+                <h2 class="vcard__name">
+                    {{ formattedName }}
+                </h2>
             {% endif %}
 
-            {% if vcard.role %}
-                <div class="vcard__role">
-                    {{ vcard.role }}
-                </div>
+            {% if showRole %}
+                {% if jobtitle %}
+                    <div class="vcard__jobtitle">
+                        {{ jobtitle }}
+                    </div>
+                {% endif %}
+
+                {% if role %}
+                    <div class="vcard__role">
+                        {{ role }}
+                    </div>
+                {% endif %}
             {% endif %}
 
-            <a
-                class="vcard__download"
-                href="{{ downloadUrl }}"
-            >
-                vCard herunterladen
-            </a>
+            {% if showPhones and phones %}
+                <div class="vcard__phones">
+                    {% for phone in phones %}
+                        {% if phone.number %}
+                            <a href="tel:{{ phone.number }}">
+                                {{ phone.number }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}        
+            
+            {% if showEmails and emailAddresses %}
+                <div class="vcard__emails">
+                    {% for email in emailAddresses %}
+                        {% if email.email %}
+                            <a href="mailto:{{ email.email }}">
+                                {{ email.email }}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}            
+
+            {% if showDownload %}
+                <a class="vcard__download" href="{{ downloadUrl }}">
+                    vCard herunterladen
+                </a>
+            {% endif %}       
 
         </div>
+
+        {% if showQrCode and qrCode %}
+            <div class="vcard__qrcode">
+                {{ qrCode|raw }}
+            </div>
+        {% endif %}
 
     </div>
 
