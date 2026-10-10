@@ -2,6 +2,12 @@
 
 {% block content %}
 
+    {% if as_editor_view %}
+
+    <span class="tl_gray">{{ formattedName }}</span>
+
+    {% else %}
+
     <div class="vcard">
 
         {% if showImage and photo %}
@@ -72,5 +78,7 @@
         {% endif %}
 
     </div>
+
+    {% endif %}
 
 {% endblock %}

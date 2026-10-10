@@ -3,7 +3,7 @@
 use Berecont\ContaoVcardBundle\Model\VcardModel;
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['vcard'] =
-    '{type_legend},type,headline;'
+    '{type_legend},type,headline,title;'
     . '{vcard_legend},vcard,size;'
     . '{vcard_display_legend},vcardShowImage,vcardShowName,vcardShowRole,vcardShowPhones,vcardShowEmails,vcardShowDownload,vcardShowQrCode,vcardQrCodeSize;'
     . '{template_legend:hide},customTpl;'
